@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Catalog Buddy</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Zilo Catalog Buddy</h1>
+
+    <section class="section">
+      <h2>1) Upload Shopify CSV</h2>
+    
+      <label for="csvFile" id="uploadBox" class="upload-box" aria-label="Upload Shopify CSV">
+        <div class="upload-icon">📦</div>
+        <div class="upload-text">Select CSV</div>
+        <div class="upload-subtext">or drag & drop here (max ~20 MB)</div>
+        <input type="file" id="csvFile" accept=".csv" hidden />
+      </label>
+    
+      <div id="fileName" class="upload-filename">No file selected</div>
+    </section>
+    <section class="section">
+      <h2>2) Select Template</h2>
+      <div class="template-select-container">
+        <select id="templateSelect">
+          <option value="">-- Select Template --</option>
+        </select>
+        <button id="loadFieldsBtn" disabled>Load fields</button>
+      </div>
+    </section>
+    
+
+    <section class="section">
+      <h2>3) Map Medusa attributes with matching Shopify fields</h2>
+      <div id="mappingContainer"></div>
+    </section>
+
+    <section class="section">
+      <h2>4) Text Cleanup Options</h2>
+      <div class="cleanup-container">
+        <label class="cleanup-label">
+          <input type="checkbox" id="enableTextCleanup" />
+          Enable HTML tag stripping
+        </label>
+        <div id="cleanupOptions" class="cleanup-options" style="display: none;">
+          <div class="column-selection">
+            <label for="cleanupColumnSelect">Select column to strip HTML tags:</label>
+            <div class="column-select-row">
+              <select id="cleanupColumnSelect">
+                <option value="">-- Select Column --</option>
+              </select>
+              <button id="addCleanupColumn" type="button" class="add-btn">+ Add</button>
+            </div>
+          </div>
+          <div id="selectedColumns" class="selected-columns">
+            <!-- Selected columns will appear here -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>5) Preview & Transform</h2>
+      <div class="preview-container">
+        <button id="previewButton" class="preview-btn">Preview Results</button>
+        <div id="previewResults" class="preview-results" style="display: none;">
+          <!-- Preview content will appear here -->
+        </div>
+        <button id="transformButton" class="transform-btn" style="display: none;">Download Transformed CSV</button>
+      </div>
+    </section>
+
+    <pre id="log"></pre>
+  </div>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

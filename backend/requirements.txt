@@ -1,0 +1,7 @@
+fastapi==0.115.0
+uvicorn==0.30.1
+pandas==2.2.3
+beautifulsoup4==4.12.3
+ftfy==6.1.1
+jinja2==3.1.4
+python-multipart==0.0.9

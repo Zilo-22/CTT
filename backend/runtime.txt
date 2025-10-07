@@ -1,0 +1,12 @@
+python-3.11
+uvicorn
+fastapi
+pandas
+beautifulsoup4
+ftfy
+jinja2
+python-multipart
+jinja2
+python-multipart
+jinja2
+python-multipart
