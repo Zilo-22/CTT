@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: catalog-buddy
+    name: CTT
     env: python
     region: singapore
     plan: free
@@ -12,3 +12,6 @@ services:
       - key: PYTHON_VERSION
         value: 3.11
     autoDeploy: true
+
+
+
